@@ -1,0 +1,6 @@
+Model,Accuracy
+Stacked Ensemble,0.7944
+XGBoost (Tuned),0.78375
+Random Forest,0.7823
+LightGBM (Tuned),0.7622
+Gradient Boosting,0.7537
