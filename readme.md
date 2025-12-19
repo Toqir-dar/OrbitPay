@@ -116,45 +116,22 @@ POST /api/v1/predict
 }
 ```
 
-### 3. **Batch Prediction**
-```http
-POST /api/v1/predict/batch
-```
-
-**Request Body:**
-```json
-{
-  "predictions": [
-    {
-      "age": 35,
-      "monthly_inhand_salary": 5000.0,
-      ...
-    },
-    {
-      "age": 28,
-      "monthly_inhand_salary": 3500.0,
-      ...
-    }
-  ]
-}
-```
-
-### 4. **Get Prediction by ID**
+### 3. **Get Prediction by ID**
 ```http
 GET /api/v1/predictions/{prediction_id}
 ```
 
-### 5. **Get Customer History**
+### 4. **Get Customer History**
 ```http
 GET /api/v1/predictions/customer/{customer_id}?limit=10
 ```
 
-### 6. **Get All Predictions**
+### 5. **Get All Predictions**
 ```http
 GET /api/v1/predictions?skip=0&limit=50&score_filter=Good
 ```
 
-### 7. **Delete Prediction**
+### 6. **Delete Prediction**
 ```http
 DELETE /api/v1/predictions/{prediction_id}
 ```
@@ -354,7 +331,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 Create `.env` file:
 ```
 DEBUG=False
-DATABASE_URL=sqlite:///./predictions.db
+DATABASE_URL=sqlite:///./database/predictions.db
 MODEL_DIR=ml_models
 ```
 
